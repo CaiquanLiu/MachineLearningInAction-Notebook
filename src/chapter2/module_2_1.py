@@ -21,7 +21,7 @@ def createDataSet():
     return group, labels
 
 
-group, labels = createDataSet()
+# group, labels = createDataSet()
 # print 'group= {}'.format(group)
 # print 'labels={}'.format(labels)
 # print 'group.shape= {}'.format(group.shape)
@@ -62,5 +62,5 @@ def classifyO(inX, dataSet, labels, k):
     return sortedClassCount[0][0]
 
 
-ans = classifyO([0, 0], group, labels, 3)
-print ans
+# ans = classifyO([0, 0], group, labels, 3)
+# print ans
