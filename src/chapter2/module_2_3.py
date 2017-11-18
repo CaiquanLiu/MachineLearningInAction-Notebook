@@ -23,6 +23,11 @@ from chapter2.module_2_1 import classify0
 
 
 def img2vector(filename):
+    '''
+    图像向量化
+    :param filename: 图像文件
+    :return:向量化结果
+    '''
     returnVect = zeros((1, 1024))
     fr = open(filename)
     for i in range(32):
@@ -35,7 +40,7 @@ def img2vector(filename):
 def handwritingClassTest():
     '''
     手写数字识别系统的测试代码
-    :return:
+    :return: 打印输出
     '''
     hwLabels = []
     trainingFileList = listdir('data/trainingDigits')

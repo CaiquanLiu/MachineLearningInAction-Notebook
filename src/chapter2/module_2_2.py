@@ -23,7 +23,7 @@ def file2matrix(filename):
     '''
     将文本记录到转换NumPy的解析程序
     :param filename:
-    :return:
+    :return:文件向量
     '''
     fr = open(filename)
     arrayOLines = fr.readlines()
@@ -61,7 +61,7 @@ def autoNorm(dataSet):
     '''
     归一化特征值
     :param dataSet:
-    :return:
+    :return: 归一化样本集合，范围，最小值
     '''
     minVals = dataSet.min(0)
     # print 'minVals={}'.format(minVals)
@@ -80,7 +80,7 @@ def autoNorm(dataSet):
 def datingClassTest():
     '''
     分类器针对约会网站的测试代码
-    :return:
+    :return:打印输出
     '''
     hoRatio = 0.10
     datingDataMat, datingLabels = file2matrix('data/datingTestSet2.txt')
@@ -102,7 +102,7 @@ def datingClassTest():
 def classifyPerson():
     '''
     约会网站预测函数
-    :return:
+    :return: 打印输出
     '''
     resultList = ['not at all', 'in small doses', 'in large doses']
     percentTats = float(raw_input("percentage of time spent playing video games?"))

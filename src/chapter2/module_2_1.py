@@ -15,7 +15,12 @@ k-近邻算法的一般流程
 from numpy import *
 import operator
 
+
 def createDataSet():
+    '''
+    创建数据集
+    :return: 样本特征集合，样本标签集合
+    '''
     group = array([[1.0, 1.1], [1.0, 1.0], [0, 0], [0, 0.1]])
     labels = ['A', 'A', 'B', 'B']
     return group, labels
@@ -38,6 +43,14 @@ def createDataSet():
 
 
 def classify0(inX, dataSet, labels, k):
+    '''
+    K临近实现
+    :param inX: 待分类样本
+    :param dataSet:训练样本特征集合
+    :param labels:训练样本标签集合
+    :param k: K取值
+    :return: 类别
+    '''
     # 距离计算
     dataSetSize = dataSet.shape[0]
     diffMat = tile(inX, (dataSetSize, 1)) - dataSet
@@ -60,7 +73,6 @@ def classify0(inX, dataSet, labels, k):
 
     sortedClassCount = sorted(classCount.iteritems(), key=operator.itemgetter(1), reverse=True)
     return sortedClassCount[0][0]
-
 
 # ans = classifyO([0, 0], group, labels, 3)
 # print ans
