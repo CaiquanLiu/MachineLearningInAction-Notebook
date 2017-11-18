@@ -37,7 +37,7 @@ def createDataSet():
 '''
 
 
-def classifyO(inX, dataSet, labels, k):
+def classify0(inX, dataSet, labels, k):
     # 距离计算
     dataSetSize = dataSet.shape[0]
     diffMat = tile(inX, (dataSetSize, 1)) - dataSet
