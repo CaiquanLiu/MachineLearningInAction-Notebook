@@ -16,7 +16,7 @@ Created on 2017/11/17 上午8:21
 from numpy import *
 import operator
 
-import module_2_1
+from chapter2.module_2_1 import *
 
 
 def file2matrix(filename):
@@ -41,7 +41,7 @@ def file2matrix(filename):
     return returnMat, classLabelVector
 
 
-datingDataMat, datingLabels = file2matrix('data/datingTestSet2.txt')
+# datingDataMat, datingLabels = file2matrix('data/datingTestSet2.txt')
 
 
 # print datingDataMat
@@ -75,5 +75,47 @@ def autoNorm(dataSet):
     return normDataSet, ranges, minVals
 
 
-normMat, ranges, minVals = autoNorm(datingDataMat)
-print 'normMat={}'.format(normMat)
+# normMat, ranges, minVals = autoNorm(datingDataMat)
+# print 'normMat={}'.format(normMat)
+def datingClassTest():
+    '''
+    分类器针对约会网站的测试代码
+    :return:
+    '''
+    hoRatio = 0.10
+    datingDataMat, datingLabels = file2matrix('data/datingTestSet2.txt')
+    normMat, ranges, minVals = autoNorm(datingDataMat)
+    m = normMat.shape[0]
+    numTestVecs = int(m * hoRatio)
+    errorCount = 0.0
+    for i in range(numTestVecs):
+        classifierResult = classifyO(normMat[i, :], normMat[numTestVecs:m, :], datingLabels[numTestVecs:m], 3)
+        print "the classifier came back, with:%d, the real answer is: %d" % (classifierResult, datingLabels[i])
+        if (classifierResult != datingLabels[i]):
+            errorCount += 1.0
+
+    print "the total error rate is: %f" % (errorCount / float(numTestVecs))
+
+
+# datingClassTest()
+
+def classifyPerson():
+    '''
+    约会网站预测函数
+    :return:
+    '''
+    resultList = ['not at all', 'in small doses', 'in large doses']
+    percentTats = float(raw_input("percentage of time spent playing video games?"))
+    ffMiles = float(raw_input("freguent flier miles earned per year?"))
+    iceCream = float(raw_input("liters of ice cream consumed per year?"))
+
+    datingDataMat, datingLabels = file2matrix('data/datingTestSet2.txt')
+    normMat, ranges, minVals = autoNorm(datingDataMat)
+
+    inArr = array([ffMiles, percentTats, iceCream])
+
+    classifierResult = classifyO((inArr - minVals) / ranges, normMat, datingLabels, 3)
+    print "You will probably like this person:", resultList[classifierResult - 1]
+
+
+classifyPerson()

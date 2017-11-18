@@ -41,15 +41,15 @@ def classifyO(inX, dataSet, labels, k):
     # 距离计算
     dataSetSize = dataSet.shape[0]
     diffMat = tile(inX, (dataSetSize, 1)) - dataSet
-    print 'diffMat= {}'.format(diffMat)
+    # print 'diffMat= {}'.format(diffMat)
 
     sqDiffMat = diffMat ** 2
     sqDistances = sqDiffMat.sum(axis=1)
     distances = sqDistances ** 0.5
-    print 'distances= {}'.format(distances)
+    # print 'distances= {}'.format(distances)
 
     sortedDistIndicies = distances.argsort()
-    print 'sortedDistIndicies= {}'.format(sortedDistIndicies)
+    # print 'sortedDistIndicies= {}'.format(sortedDistIndicies)
 
     classCount = {}
 
