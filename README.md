@@ -69,3 +69,48 @@
 
 ## 第三章 决策树
 * 3-1 决策树的构造(module_3_1)
+        def calcShannonEnt(dataSet):
+            '''
+            计算给定数据集的香农熵
+            :param dataSet: 测试数据集
+            :return: 数据集香浓值
+            '''
+        
+        def createDataSet():
+            '''
+            自定义数据集
+            :return: 自定义的数据集
+            '''
+        
+        def splitDataSet(dataSet, axis, value):
+            '''
+            按照给定特征划分数据集
+            :param dataSet: 需要划分的数据集
+            :param axis:划分数据集的特征
+            :param value:特征的返回值
+            :return: 划分后的数据集
+            '''
+    
+        def chooseBestFeatureToSplit(dataSet):
+            '''
+            选择最好的数据集划分方式
+            :param dataSet: 待划分数据集
+            :return: 选择的特征
+            '''
+    
+        def majorityCnt(classList):
+            '''
+            出现次数最多的分类名称
+            :param classList: 分类
+            :return: 分类名称
+            '''
+    
+        def createTree(dataSet, labels):
+            '''
+            创建树的函数代码
+            :param dataSet: 数据集
+            :param labels: 标签
+            :return: 决策树
+            '''
+* 3-2 在 Python中使用Matplotlib注解绘制树形图(module_3_2)
+        
