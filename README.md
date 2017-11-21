@@ -113,4 +113,66 @@
             :return: 决策树
             '''
 * 3-2 在 Python中使用Matplotlib注解绘制树形图(module_3_2)
-        
+
+        def plotNode(nodeTxt, centerPt, parentPt, nodeType):
+            '''
+            决策树节点绘制
+            :param nodeTxt:节点内容
+            :param centerPt:root节点
+            :param parentPt:父节点
+            :param nodeType:节点类型
+            :return:
+            '''
+
+        def createPlot():
+            '''
+            测试用例，绘制两个节点
+            :return:
+            '''
+            
+        def getNumLeafs(myTree):
+            '''
+            获得叶子节点的个数
+            :param myTree: 决策树
+            :return:
+            '''
+    
+        def getTreeDepth(myTree):
+            '''
+            决策树深度
+            :param myTree:决策树
+            :return:
+            '''
+            
+        def retrieveTree(i):
+            '''
+            获取决策树样例
+            :param i:决策树索引
+            :return:
+            '''
+    
+        def plotMidText(cntrPt, parentPt, txtString):
+            '''
+            决策树父子节点之间的关系绘制
+            :param cntrPt: 决策树节点
+            :param parentPt: 父节点
+            :param txtString: 节点描述
+            :return:
+            '''
+            
+        def plotTree(myTree, parentPt, nodeTxt):
+            '''
+            决策树递归绘制
+            :param myTree:待绘制决策树
+            :param parentPt: 父节点
+            :param nodeTxt: 节点描述
+            :return:
+            '''
+    
+        def createPlot(inTree):
+            '''
+            完整决策树绘制
+            :param inTree: 决策树
+            :return:
+            '''
+* 3-3 测试和存储分类器(module_3_3) 

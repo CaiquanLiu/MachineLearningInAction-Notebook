@@ -139,6 +139,6 @@ def createTree(dataSet, labels):
     return myTree
 
 
-myDat, labels = createDataSet()
-myTree = createTree(myDat, labels)
-print myTree
+# myDat, labels = createDataSet()
+# myTree = createTree(myDat, labels)
+# print myTree
