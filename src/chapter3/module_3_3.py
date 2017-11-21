@@ -63,6 +63,6 @@ def grabTree(filename):
     return pickle.load(fr)
 
 
-myTree = retrieveTree(0)
-storeTree(myTree, 'classifierStorage.txt')
-print grabTree('classifierStorage.txt')
+# myTree = retrieveTree(0)
+# storeTree(myTree, 'classifierStorage.txt')
+# print grabTree('classifierStorage.txt')

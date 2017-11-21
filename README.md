@@ -176,3 +176,26 @@
             :return:
             '''
 * 3-3 测试和存储分类器(module_3_3) 
+
+        def classify(inputTree, featLabels, testVec):
+            '''
+            使用决策树的分类函数
+            :param inputTree: 决策树
+            :param featLabels: 标签
+            :param testVec: 待分类样本
+            :return:
+            '''
+        def storeTree(inputTree, filename):
+            '''
+            使用pickle存储决策树
+            :param inputTree: 决策树
+            :param filename: 保存文件名
+            :return:
+            '''
+        def grabTree(filename):
+            '''
+            使用pickle恢复决策树
+            :param filename: 文件名
+            :return:
+            '''    
+* 3-4 使用决策树预测隐形眼镜类型(module_3_4)
