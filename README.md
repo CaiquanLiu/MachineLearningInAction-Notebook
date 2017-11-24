@@ -199,3 +199,93 @@
             :return:
             '''    
 * 3-4 使用决策树预测隐形眼镜类型(module_3_4)
+
+## 第四章 基于概率论的分类方法：朴素贝叶斯
+
+* 4-5 使用Python进行文本分类
+
+        def loadDataSet():
+            '''
+            创建数据集
+            :return: 数据集，分类
+            '''
+        def createVocabList(dataSet):
+            '''
+            创建词表
+            :param dataSet:
+            :return:
+            '''
+        def setOfWords2Vec(vocabList, inputSet):
+            '''
+            输入数据向量化
+            :param vocabList: 输入文本
+            :param inputSet: 词表
+            :return:
+            '''
+        def trainNB0(trainMatrix, trainCategory):
+            '''
+            朴素贝叶斯关键参数计算
+            :param trainMatrix: 已词集向量化的数据集
+            :param trainCategory: 分类结果
+            :return: P(w|A), P(w|B), P(A)
+            '''
+        def classifyNB(vec2Classify, p0Vec, p1Vec, pClass1):
+            '''
+            朴素贝叶斯分类计算
+            :param vec2Classify: 已词集向量化的数据集
+            :param p0Vec: P(w|A)
+            :param p1Vec: P(w|B)
+            :param pClass1: P(A)
+            :return:
+            '''
+        def testingNB():
+            '''
+            自定义数据集分类测试
+            :return:
+            '''
+        def bagOfWords2VecMN(vocabList, inputSet):
+            '''
+            朴素贝叶斯词袋模型
+            :param vocabList: 词表
+            :param inputSet: 待向量化原始样本
+            :return:
+            '''
+* 4-6 示例:使用朴素贝叶斯过滤垃圾邮件
+
+        def textParse(bigString):
+            '''
+            分词
+            :param bigString: 文本内容
+            :return:
+            '''
+        def spamTest():
+            '''
+            使用朴素贝叶斯进行邮件分类测试
+            :return:
+            '''
+
+* 4-7 示例:使用朴素贝叶斯分类器从个人广告中获取区域倾向
+
+        def calcMostFreq(vocabList, fullText):
+            '''
+            高词频词语检测
+            :param vocabList: 词表
+            :param fullText:  所有文本
+            :return:
+            '''
+        def localWords(feed1, feed0):
+            '''
+            使用RSS进行朴素贝叶斯测试
+            :param feed1: RSS1样本
+            :param feed0: RSS2样本
+            :return: 词表，p0V, p1V
+            '''
+        def getTopWords(ny, sf):
+            '''
+            高频词统计
+            :param ny: RSS1
+            :param sf: RSS2
+            :return: 打印输出
+            '''
+            
+## 第五章 Logistic回归
